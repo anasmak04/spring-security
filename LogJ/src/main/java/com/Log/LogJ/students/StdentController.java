@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("api/students/")
+@RequestMapping("api/students")
 public class StdentController {
 		private static final List<Student> students = Arrays.asList(
 				new Student(1,"anas"),
