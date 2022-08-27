@@ -50,8 +50,14 @@ public class AppConfig extends WebSecurityConfigurerAdapter {
 			.roles(ApplicationuserRole.ADMIN.name())
 			.build();
 			
+			UserDetails JUSTVISITOR = User.builder()
+					.username("visitor")
+					.password(passwordEncoder.encode("visitor123"))
+					.roles(ApplicationuserRole.VISITOR.name())
+					.build();
+			
 			return new InMemoryUserDetailsManager(
-					anasbilaluser,anasAdmin
+					anasbilaluser,anasAdmin,JUSTVISITOR
 					);
 	}
 
